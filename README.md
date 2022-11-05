@@ -1,3 +1,3 @@
 # goit-markup-hw-05
 HW #5
-NTFgoiut
+NTF go to eat it
