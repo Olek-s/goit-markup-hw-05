@@ -103,7 +103,6 @@ p {
   line-height: 1.1428;
   letter-spacing: 0.02em;
   color: var(--color-secondary-button);
-  gap: 50px;
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -113,7 +112,8 @@ p {
   color: var(--color-blue);
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:focus {
   color: var(--color-blue);
 }
 
@@ -145,7 +145,8 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-item-contact:hover {
+.nav-item-contact:hover,
+.nav-item-contact:focus {
   color: var(--color-blue);
 }
 
@@ -164,14 +165,13 @@ p {
   padding: 24px 0px;
 }
 
-.nav-item::after {
+.current:after {
   display: block;
   position: absolute;
-  opacity: 0;
   width: 100%;
   height: 4px;
   bottom: -1px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
   background-color: currentcolor;
   content: '';
 }
@@ -484,6 +484,7 @@ p {
   width: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  outline: none;
 }
 
 .cl-logo-frame img {
@@ -620,9 +621,9 @@ p {
   left: 0px;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
   opacity: 1;
-  z-index: 1;
+  visibility: visible;
+  pointer-events: all;
   transition: opacity 250ms cubic-bezier (0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier (0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
@@ -641,6 +642,7 @@ p {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  border-radius: 4px;
   background-color: var(--color-primary-white);
 }
 
@@ -749,7 +751,8 @@ p {
   display: block;
 }
 
-.port-item-link:hover .port-item-overlay {
+.port-item-link:hover .port-item-overlay,
+.port-item-link:focus .port-item-overlay {
   transform: translateY(0);
 }
 
