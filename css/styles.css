@@ -646,6 +646,10 @@ p {
   background-color: var(--color-primary-white);
 }
 
+.form-label {
+  display: block;
+}
+
 .modal-close-button {
   display: flex;
   justify-content: center;
@@ -660,7 +664,19 @@ p {
   border-radius: 50%;
 }
 
+.form-control {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
 .close-icon {
+  position: absolute;
 }
 
 /*Portfolio*/
